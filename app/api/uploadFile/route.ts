@@ -1,11 +1,8 @@
-import { createRouteHandler } from "uploadthing/next-legacy";
+import { createRouteHandler } from "uploadthing/next";
+ 
 import { ourFileRouter } from "./core";
  
-
- 
-export default createRouteHandler({
+// Export routes for Next App Router
+export const { GET, POST } = createRouteHandler({
   router: ourFileRouter,
- 
-  // Apply an (optional) custom config:
-  // config: { ... },
 });
